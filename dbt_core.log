@@ -1,0 +1,144 @@
+[0m19:58:45.479026 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b384830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1bf9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c1bfc50>]}
+
+
+============================== 19:58:45.480850 | ba5ebb35-1f31-4e75-af36-e4db98787b2b ==============================
+[0m19:58:45.480850 [info ] [MainThread]: Running with dbt=1.10.13
+[0m19:58:45.481140 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt build', 'profiles_dir': '/Users/lawrence/programming/etc/dbtf-debug/demo_project', 'introspect': 'True', 'write_json': 'True', 'target_path': 'None', 'printer_width': '80', 'log_cache_events': 'False', 'static_parser': 'True', 'version_check': 'True', 'no_print': 'None', 'fail_fast': 'False', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_format': 'default', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/lawrence/programming/etc/dbtf-debug/demo_project/logs', 'quiet': 'False', 'empty': 'False', 'warn_error': 'None', 'debug': 'False', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m19:58:45.642749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ba5ebb35-1f31-4e75-af36-e4db98787b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b54c050>]}
+[0m19:58:45.665076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ba5ebb35-1f31-4e75-af36-e4db98787b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cd1d7b0>]}
+[0m19:58:45.665487 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:58:45.715395 [debug] [MainThread]: checksum: 9f0c81e2574b4ff463f3d16d080df83c6982fc0372c9feeacae0504ac9ea3ffe, vars: {}, profile: , target: , version: 1.10.13
+[0m19:58:45.768989 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:58:45.769191 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:58:45.788457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ba5ebb35-1f31-4e75-af36-e4db98787b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d138b50>]}
+[0m19:58:45.826214 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/lawrence/programming/etc/dbtf-debug/demo_project/target/manifest.json
+[0m19:58:45.827191 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/lawrence/programming/etc/dbtf-debug/demo_project/target/semantic_manifest.json
+[0m19:58:45.838565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ba5ebb35-1f31-4e75-af36-e4db98787b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4616d0>]}
+[0m19:58:45.838790 [info ] [MainThread]: Found 1 model, 2 data tests, 1 source, 608 macros
+[0m19:58:45.839633 [info ] [MainThread]: 
+[0m19:58:45.839802 [info ] [MainThread]: Concurrency: 16 threads (target='dev')
+[0m19:58:45.839929 [info ] [MainThread]: 
+[0m19:58:45.840151 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:58:45.840552 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_TEST'
+[0m19:58:45.863954 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST"
+[0m19:58:45.864261 [debug] [ThreadPool]: On list_DBT_TEST: show terse schemas in database DBT_TEST
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "dbtf_debug", "target_name": "dev", "connection_name": "list_DBT_TEST"} */
+[0m19:58:45.864512 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:58:46.738833 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.874 seconds
+[0m19:58:46.741001 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_TEST, now list_DBT_TEST_LA_DEV)
+[0m19:58:46.749688 [debug] [ThreadPool]: Using snowflake connection "list_DBT_TEST_LA_DEV"
+[0m19:58:46.749948 [debug] [ThreadPool]: On list_DBT_TEST_LA_DEV: show objects in DBT_TEST.LA_DEV
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "dbtf_debug", "target_name": "dev", "connection_name": "list_DBT_TEST_LA_DEV"} */;
+[0m19:58:46.864649 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.114 seconds
+[0m19:58:46.865843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ba5ebb35-1f31-4e75-af36-e4db98787b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e3809f0>]}
+[0m19:58:46.867446 [debug] [Thread-1 (]: Began running node model.dbtf_debug.stg_test_model
+[0m19:58:46.867668 [info ] [Thread-1 (]: 1 of 3 START sql view model LA_DEV.stg_test_model .............................. [RUN]
+[0m19:58:46.867869 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_DBT_TEST_LA_DEV, now model.dbtf_debug.stg_test_model)
+[0m19:58:46.868003 [debug] [Thread-1 (]: Began compiling node model.dbtf_debug.stg_test_model
+[0m19:58:46.870887 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbtf_debug.stg_test_model"
+[0m19:58:46.871250 [debug] [Thread-1 (]: Began executing node model.dbtf_debug.stg_test_model
+[0m19:58:46.882703 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbtf_debug.stg_test_model"
+[0m19:58:46.883287 [debug] [Thread-1 (]: Using snowflake connection "model.dbtf_debug.stg_test_model"
+[0m19:58:46.883458 [debug] [Thread-1 (]: On model.dbtf_debug.stg_test_model: create or replace   view DBT_TEST.LA_DEV.stg_test_model
+  
+  
+  
+  
+  as (
+    select val
+from "Mixed_Case_Source".public.dud_table
+  )
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "dbtf_debug", "target_name": "dev", "node_id": "model.dbtf_debug.stg_test_model"} */;
+[0m19:58:47.053204 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.170 seconds
+[0m19:58:47.065294 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ba5ebb35-1f31-4e75-af36-e4db98787b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x116c36ea0>]}
+[0m19:58:47.065651 [info ] [Thread-1 (]: 1 of 3 OK created sql view model LA_DEV.stg_test_model ......................... [[32mSUCCESS 1[0m in 0.20s]
+[0m19:58:47.065916 [debug] [Thread-1 (]: Finished running node model.dbtf_debug.stg_test_model
+[0m19:58:47.066371 [debug] [Thread-2 (]: Began running node test.dbtf_debug.check_not_empty
+[0m19:58:47.066603 [debug] [Thread-3 (]: Began running node test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15
+[0m19:58:47.066767 [info ] [Thread-2 (]: 2 of 3 START test check_not_empty .............................................. [RUN]
+[0m19:58:47.066941 [info ] [Thread-3 (]: 3 of 3 START test not_null_stg_test_model_val .................................. [RUN]
+[0m19:58:47.067169 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.dbtf_debug.check_not_empty'
+[0m19:58:47.067343 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15'
+[0m19:58:47.067478 [debug] [Thread-2 (]: Began compiling node test.dbtf_debug.check_not_empty
+[0m19:58:47.067612 [debug] [Thread-3 (]: Began compiling node test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15
+[0m19:58:47.068690 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbtf_debug.check_not_empty"
+[0m19:58:47.073523 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15"
+[0m19:58:47.073958 [debug] [Thread-3 (]: Began executing node test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15
+[0m19:58:47.074139 [debug] [Thread-2 (]: Began executing node test.dbtf_debug.check_not_empty
+[0m19:58:47.081565 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15"
+[0m19:58:47.082853 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbtf_debug.check_not_empty"
+[0m19:58:47.083389 [debug] [Thread-2 (]: Using snowflake connection "test.dbtf_debug.check_not_empty"
+[0m19:58:47.083676 [debug] [Thread-3 (]: Using snowflake connection "test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15"
+[0m19:58:47.083842 [debug] [Thread-2 (]: On test.dbtf_debug.check_not_empty: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  select count(*)
+from DBT_TEST.LA_DEV.stg_test_model
+having count(*) != 1
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "dbtf_debug", "target_name": "dev", "node_id": "test.dbtf_debug.check_not_empty"} */
+[0m19:58:47.084011 [debug] [Thread-3 (]: On test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15: select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select val
+from DBT_TEST.LA_DEV.stg_test_model
+where val is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+/* {"app": "dbt", "dbt_version": "1.10.13", "profile_name": "dbtf_debug", "target_name": "dev", "node_id": "test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15"} */
+[0m19:58:47.084182 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m19:58:47.084323 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:58:48.009174 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.924 seconds
+[0m19:58:48.015291 [info ] [Thread-3 (]: 3 of 3 PASS not_null_stg_test_model_val ........................................ [[32mPASS[0m in 0.95s]
+[0m19:58:48.015964 [debug] [Thread-3 (]: Finished running node test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15
+[0m19:58:48.857123 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.773 seconds
+[0m19:58:48.859817 [info ] [Thread-2 (]: 2 of 3 PASS check_not_empty .................................................... [[32mPASS[0m in 1.79s]
+[0m19:58:48.860433 [debug] [Thread-2 (]: Finished running node test.dbtf_debug.check_not_empty
+[0m19:58:48.862305 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:58:48.862562 [debug] [MainThread]: Connection 'model.dbtf_debug.stg_test_model' was left open.
+[0m19:58:48.862796 [debug] [MainThread]: On model.dbtf_debug.stg_test_model: Close
+[0m19:58:48.977772 [debug] [MainThread]: Connection 'test.dbtf_debug.check_not_empty' was left open.
+[0m19:58:48.978234 [debug] [MainThread]: On test.dbtf_debug.check_not_empty: Close
+[0m19:58:49.099344 [debug] [MainThread]: Connection 'test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15' was left open.
+[0m19:58:49.099879 [debug] [MainThread]: On test.dbtf_debug.not_null_stg_test_model_val.3a6f326b15: Close
+[0m19:58:49.224903 [info ] [MainThread]: 
+[0m19:58:49.225930 [info ] [MainThread]: Finished running 2 data tests, 1 view model in 0 hours 0 minutes and 3.38 seconds (3.38s).
+[0m19:58:49.227427 [debug] [MainThread]: Command end result
+[0m19:58:49.249477 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/lawrence/programming/etc/dbtf-debug/demo_project/target/manifest.json
+[0m19:58:49.250730 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/lawrence/programming/etc/dbtf-debug/demo_project/target/semantic_manifest.json
+[0m19:58:49.254476 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/lawrence/programming/etc/dbtf-debug/demo_project/target/run_results.json
+[0m19:58:49.254687 [info ] [MainThread]: 
+[0m19:58:49.254919 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:58:49.255098 [info ] [MainThread]: 
+[0m19:58:49.255303 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m19:58:49.255693 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 3.8050666, "process_in_blocks": "0", "process_kernel_time": 0.204186, "process_mem_max_rss": "180109312", "process_out_blocks": "0", "process_user_time": 1.210836}
+[0m19:58:49.255994 [debug] [MainThread]: Command `dbt build` succeeded at 19:58:49.255940 after 3.81 seconds
+[0m19:58:49.256221 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0b90d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x116c717b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x116c71650>]}
+[0m19:58:49.256429 [debug] [MainThread]: Flushing usage events
+[0m19:58:49.788559 [debug] [MainThread]: An error was encountered while trying to flush usage events
