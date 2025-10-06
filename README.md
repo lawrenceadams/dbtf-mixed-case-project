@@ -18,7 +18,7 @@ create table "Mixed_Case_Source".PUBLIC.dud_table as (SELECT 1 as val);
 
 When using `dbt run && dbt test` the functionality is as expected, *however* - when using `dbt build` the run fails, as shown below:
 
-![image.png](Image with cli output)
+![Image with CLI output](./image.png)
 
 ----
 
