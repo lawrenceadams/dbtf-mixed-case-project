@@ -1,0 +1,9 @@
+name: dbtf_debug
+
+profile: dbtf_debug
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+clean-targets:
+  - "target"
+  - "dbt_packages"

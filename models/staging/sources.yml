@@ -1,0 +1,13 @@
+version: 2
+
+# Try using these source definitions instead!
+sources:
+  - name: upstream_source
+    quoting:
+      database: true
+      schema: false
+      identifier: false
+    database: "Mixed_Case_Source"
+    schema: public
+    tables:
+      - name: dud_table
